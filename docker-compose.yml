@@ -6,7 +6,10 @@ services:
     image: shibboleth-idp
     # health: /opt/shibboleth-idp/bin/status.sh -u http://idp.localhost/idp
     # health: ./bin/status.sh -u http://localhost:8080/idp
+    command: [ "java", "-jar", "/usr/local/jetty/start.jar", "--add-module=logging-logback" ]
     volumes:
+      - ./jetty/webapps/idp.xml:/var/lib/jetty/webapps/idp.xml
+      - ./jetty/start.d/idp.ini:/var/lib/jetty/start.d/idp.ini
       - ./shibboleth-idp/conf:/opt/shibboleth-idp/conf
       - ./shibboleth-idp/credentials/secrets.properties:/opt/shibboleth-idp/credentials/secrets.properties
       - ./shibboleth-idp/edit-webapp:/opt/shibboleth-idp/edit-webapp
