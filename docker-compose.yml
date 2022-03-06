@@ -4,8 +4,6 @@ services:
   idp:
     build: .
     image: shibboleth-idp
-    # health: /opt/shibboleth-idp/bin/status.sh -u http://idp.localhost/idp
-    # health: ./bin/status.sh -u http://localhost:8080/idp
     volumes:
       - ./jetty/webapps/idp.xml:/var/lib/jetty/webapps/idp.xml
       - ./jetty/start.d/idp.ini:/var/lib/jetty/start.d/idp.ini
