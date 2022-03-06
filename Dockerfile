@@ -26,3 +26,4 @@ RUN tar -zxvf shibboleth-identity-provider-$IDP_VERSION.tar.gz \
 # RUN ln -s /opt/shibboleth-idp/war/idp.war /var/lib/jetty/webapps
 USER jetty
 WORKDIR /var/lib/jetty
+CMD [ "java", "-jar", "/usr/local/jetty/start.jar", "--add-module=logging-logback" ]

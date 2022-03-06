@@ -8,5 +8,5 @@
 - https://shibboleth.atlassian.net/wiki/spaces/IDP4/pages/1265631857/ProtocolsAndInterfaces
 - https://shibboleth.atlassian.net/wiki/spaces/DEV/pages/1118699530/Technical+Specifications
 - https://shibboleth.atlassian.net/wiki/spaces/IDP4/pages/2936012848/Jetty10#Configure-IdP-Context-Descriptor
-- http://idp.localhost/idp/
-- https://shibboleth.atlassian.net/wiki/spaces/IDP30/pages/2496987520/SecurityAdvisories
+- https://shibboleth.atlassian.net/wiki/spaces/IDP4/pages/1265631751/MessagesTranslation
+- https://shibboleth.atlassian.net/wiki/spaces/IDP4/pages/1265631852/AACLI
