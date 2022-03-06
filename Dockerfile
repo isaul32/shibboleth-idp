@@ -22,9 +22,7 @@ RUN tar -zxvf shibboleth-identity-provider-$IDP_VERSION.tar.gz \
     -Didp.scope localdomain \
     && chown -R jetty:jetty /opt/shibboleth-idp \
     && rm -fr shibboleth-identity-provider-$IDP_VERSION
-# WORKDIR /opt/shibboleth-idp
-# # TODO customization
-# RUN ./bin/build.sh -Didp.target.dir /opt/shibboleth-idp
+# RUN /opt/shibboleth-idp/bin/build.sh -Didp.target.dir /opt/shibboleth-idp
 RUN ln -s /opt/shibboleth-idp/war/idp.war /var/lib/jetty/webapps
 USER jetty
 WORKDIR /var/lib/jetty
